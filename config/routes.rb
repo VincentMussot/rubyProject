@@ -1,7 +1,10 @@
 Blog2::Application.routes.draw do
+
+	get '/posts/new', :controller => :posts, :action => :new, :as => "new_post"
+	get '/posts', :controller => :posts, :action => :index, :as => "post"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
-
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
