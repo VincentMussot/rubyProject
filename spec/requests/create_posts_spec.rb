@@ -11,5 +11,10 @@ describe "CreatePosts" do
 			visit new_post_path
 			page.should have_button('Create Post')
     end
+    it "should contain a button create post which leads to the index page" do
+			visit new_post_path
+			click_button 'Create Post'
+			current_path.should == posts_path
+		end
   end
 end
